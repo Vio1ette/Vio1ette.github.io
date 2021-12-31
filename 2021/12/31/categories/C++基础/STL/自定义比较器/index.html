@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"home":"/","about":"/about","tags":"/tags","categories":"/categories"}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="再勇敢一点，再自信一点">
-<meta property="og:type" content="website">
+  <meta name="description" content="有序容器(map, set, multimap, multiset)自定义比较器1. 函数指针1234567bool my_fun(const my_Class &amp;a, const my_Class &amp;b)&amp;#123;    return a.length() &lt; b.length();&amp;#125;int main()&amp;#123;    set&lt;my_Class, de">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Klong&#39;s Blog">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+<meta property="og:url" content="http://example.com/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/STL/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%AF%94%E8%BE%83%E5%99%A8/index.html">
 <meta property="og:site_name" content="Klong&#39;s Blog">
-<meta property="og:description" content="再勇敢一点，再自信一点">
+<meta property="og:description" content="有序容器(map, set, multimap, multiset)自定义比较器1. 函数指针1234567bool my_fun(const my_Class &amp;a, const my_Class &amp;b)&amp;#123;    return a.length() &lt; b.length();&amp;#125;int main()&amp;#123;    set&lt;my_Class, de">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-31T02:09:01.548Z">
+<meta property="article:modified_time" content="2021-11-13T11:43:11.375Z">
 <meta property="article:author" content="pano">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/2021/">
+<link rel="canonical" href="http://example.com/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/STL/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%AF%94%E8%BE%83%E5%99%A8/">
 
 
 <script id="page-configurations">
@@ -38,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Klong's Blog</title>
+  <title> | Klong's Blog</title>
   
 
 
@@ -152,234 +154,97 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 17 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/STL/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%AF%94%E8%BE%83%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/spongeBob-01.jpg">
+      <meta itemprop="name" content="pano">
+      <meta itemprop="description" content="再勇敢一点，再自信一点">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Klong's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-12-31 10:09:01" itemprop="dateCreated datePublished" datetime="2021-12-31T10:09:01+08:00">2021-12-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-11-13 19:43:11" itemprop="dateModified" datetime="2021-11-13T19:43:11+08:00">2021-11-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <h3 id="有序容器-map-set-multimap-multiset-自定义比较器"><a href="#有序容器-map-set-multimap-multiset-自定义比较器" class="headerlink" title="有序容器(map, set, multimap, multiset)自定义比较器"></a>有序容器(map, set, multimap, multiset)自定义比较器</h3><h4 id="1-函数指针"><a href="#1-函数指针" class="headerlink" title="1. 函数指针"></a>1. 函数指针</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">my_fun</span><span class="params">(<span class="keyword">const</span> my_Class &amp;a, <span class="keyword">const</span> my_Class &amp;b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.<span class="built_in">length</span>() &lt; b.<span class="built_in">length</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">set&lt;my_Class, <span class="title">decltype</span><span class="params">(my_fun)</span>*&gt; <span class="title">st</span><span class="params">(my_fun)</span></span>; <span class="comment">// 构造函数的参数也可以写为 st(&amp;my_fun)</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>定义 set 的第二个参数应该是函数指针</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">decltype</span>(my_fun)*  <span class="comment">//decltype的结果仅仅是函数类型，只有加上 * 才能获得函数指针</span></span><br></pre></td></tr></table></figure>
+
+<p>用 <code>my_fun</code> 或 <code>&amp;my_fun</code> 作为构造函数的参数</p>
+<blockquote>
+<p>对函数名来讲，加不加星号（都表示函数类型），取不取地址（都表示函数地址，函数指针类型），没区别</p>
+</blockquote>
+<h4 id="2-仿函数"><a href="#2-仿函数" class="headerlink" title="2. 仿函数"></a>2. 仿函数</h4><h4 id="3-Lambda表达式"><a href="#3-Lambda表达式" class="headerlink" title="3. Lambda表达式"></a>3. Lambda表达式</h4>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
+      <footer class="post-footer">
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/%E7%B1%BB/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/%E7%B1%BB/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E4%B8%8E%E7%BB%A7%E6%89%BF/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/%E7%B1%BB/%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%93%E9%A2%98/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/%E7%B1%BB/%E5%90%8D%E5%AD%97%E6%9F%A5%E6%89%BE%E4%B8%8E%E7%BB%A7%E6%89%BF/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/STL/%E5%85%B3%E8%81%94%E5%AE%B9%E5%99%A8/%E5%85%B3%E8%81%94%E5%AE%B9%E5%99%A8%E5%9F%BA%E7%A1%80/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/STL/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%AF%94%E8%BE%83%E5%99%A8/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/%E5%88%9D%E5%A7%8B%E5%8C%96/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-12-31T10:09:01+08:00"
-              content="2021-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/static-const%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93/" itemprop="url">
-            <span itemprop="name">Untitled</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        
 
 
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/31/categories/C++%E5%9F%BA%E7%A1%80/STL/%E5%85%B3%E8%81%94%E5%AE%B9%E5%99%A8/%E5%85%B3%E8%81%94%E5%AE%B9%E5%99%A8%E5%9F%BA%E7%A1%80/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2021/page/2/">2</a><a class="extend next" rel="next" href="/archives/2021/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
 
 
 
@@ -431,6 +296,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%AE%B9%E5%99%A8-map-set-multimap-multiset-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%AF%94%E8%BE%83%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">有序容器(map, set, multimap, multiset)自定义比较器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88"><span class="nav-number">1.1.</span> <span class="nav-text">1. 函数指针</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BB%BF%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">2. 仿函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">3. Lambda表达式</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
